@@ -1,0 +1,34 @@
+/* global css should go here */
+
+/*
+ potentially add:
+ - active/focus
+ - links
+ - form css
+*/
+
+:global html {
+  font-family: var(--font-family);
+  font-size: var(--font-size-md);
+  height: 100%;
+}
+
+:global strong {
+  font-weight: var(--font-weight-bold);
+}
+
+:global body {
+  height: 100%;
+  margin: 0;
+}
+
+:global button {
+  background-color: var(--lightest-gray);
+  border: none;
+  border-width: var(--standard-border-width);
+  border-radius: var(--base-border-radius);
+  margin: var(--standard-margin);
+  padding: var(--standard-padding);
+  font-size: var(--font-size-md);
+  cursor: pointer;
+}

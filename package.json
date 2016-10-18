@@ -1,0 +1,66 @@
+{
+  "name": "picture_this",
+  "version": "0.0.1",
+  "description": "A React UI component Library for Viewing Photos.",
+  "author": "Marc Phillips",
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/pmarca/picturethis.git"
+  },
+  "main": "./lib/index.js",
+  "scripts": {
+    "start": "webpack-dev-server --progress --colors --hot --config ./webpack.config.js",
+    "lint": "eslint ."
+
+  },
+  "keywords": [
+    "react",
+    "react-component",
+    "derigible",
+    "images"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.11.4",
+    "babel-loader": "^6.2.4",
+    "babel-polyfill": "~6.13.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.1.18",
+    "babel-preset-stage-0": "^6.3.13",
+    "babel-preset-stage-1": "~6.13.0",
+    "babel-preset-stage-2": "^6.11.0",
+    "babel-runtime": "^6.3.19",
+    "eslint": "^2.8.0",
+    "eslint-config-standard": "~5.1.0",
+    "eslint-config-standard-react": "~2.3.0",
+    "eslint-loader": "^1.3.0",
+    "eslint-plugin-mocha": "^4.5.1",
+    "eslint-plugin-promise": "~1.1.0",
+    "eslint-plugin-react": "~5.0.1",
+    "eslint-plugin-standard": "~1.3.1",
+    "exports-loader": "^0.6.3",
+    "imports-loader": "^0.6.5",
+    "raw-loader": "~0.5.1",
+    "react": "^15.2.1",
+    "react-dom": "^15.2",
+    "react-hot-loader": "^1.3.0",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "instructure-icons": "^0.0.7",
+    "instructure-ui": "^0.15.0",
+    "lodash": "^4.16.2"
+  },
+  "peerDependencies": {
+    "babel-polyfill": "~6.13.0",
+    "react": "^15.2.1",
+    "react-dom": "^15.2"
+  },
+  "preprocessors": {
+    "**.js": [
+      "webpack",
+      "sourcemap"
+    ]
+  }
+}

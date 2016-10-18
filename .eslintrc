@@ -1,0 +1,63 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "mocha": true,
+    "node": true,
+    "es6": true
+  },
+  "globals": {
+    "expect": true,
+    "sinon": true,
+    "createTestbed": true,
+    "shouldRenderComponent": true
+  },
+  "settings": {
+    "ecmascript": 6,
+    "jsx": true
+  },
+  "plugins": [
+    "react",
+    "mocha",
+    "jsx-a11y"
+  ],
+  "rules": {
+    "generator-star-spacing": 0, # https://github.com/babel/babel-eslint/issues/316
+    "max-len": [2, 120, 2],
+    "jsx-a11y/anchor-has-content": 2,
+    "jsx-a11y/aria-props": 2,
+    "jsx-a11y/aria-proptypes": 2,
+    "jsx-a11y/aria-role": 2,
+    "jsx-a11y/aria-unsupported-elements": 2,
+    "jsx-a11y/click-events-have-key-events": 2,
+    "jsx-a11y/heading-has-content": 2,
+    "jsx-a11y/href-no-hash": 2,
+    "jsx-a11y/label-has-for": 2,
+    "jsx-a11y/mouse-events-have-key-events": 2,
+    "jsx-a11y/no-access-key": 2,
+    "jsx-a11y/no-marquee": 2,
+    "jsx-a11y/no-onchange": 2,
+    "jsx-a11y/onclick-has-focus": 2,
+    "jsx-a11y/onclick-has-role": 2,
+    "jsx-a11y/role-has-required-aria-props": 2,
+    "jsx-a11y/role-supports-aria-props": 2,
+    "jsx-a11y/scope": 2,
+    "jsx-a11y/tabindex-no-positive": 2,
+    "jsx-quotes": [2, "prefer-double"],
+    "key-spacing": [2, {
+      "beforeColon": false,
+      "afterColon": true,
+      "mode": "minimum"
+    }],
+    "no-var": 2,
+    "no-ternary": 0,
+    "prefer-const": 2,
+    "no-console": 2,
+    "no-param-reassign": [2, { "props": true }],
+    "mocha/no-exclusive-tests": "error"
+  },
+  "extends": [
+    "standard",
+    "standard-react"
+  ]
+}
