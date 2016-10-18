@@ -1,0 +1,11 @@
+.root {
+  padding: var(--standard-padding);
+}
+
+.medium {
+  width: var(--box-size-medium);
+}
+
+.large {
+  width: var(--box-size-large);
+}

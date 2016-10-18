@@ -8,11 +8,27 @@ module.exports = {
     './src/index.js'
   ],
   module: {
-    loaders: [{
-      test: /\.jsx?$/,
-      exclude: /node_modules/,
-      loader: 'react-hot!babel'
-    }]
+    loaders: [
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loader: 'react-hot!babel'
+      },
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        loaders: [
+          'style',
+          'css?importLoaders=1&modules&localIdentName=ic-picthis-[folder]-[name]__[local]',
+          'postcss'
+        ]
+      },
+      {
+        test: /\.css$/,
+        include: /node_modules/,
+        loaders: [ 'style', 'css' ]
+      }
+    ]
   },
   resolve: {
     extensions: ['', '.js', '.jsx']
@@ -28,5 +44,22 @@ module.exports = {
     historyApiFallback: true
   },
   plugins: [
-  ]
+  ],
+  postcss (webpack) {
+    const srcCss = require('./lib/styles/variables')
+    return [
+      require('webpack-postcss-tools').prependTildesToImports,
+      require('postcss-import')({addDependencyTo: webpack}),
+      require('postcss-url')({url: 'inline'}),
+      require('postcss-cssnext')({
+        browsers: ['last 2 versions'],
+        features: {
+          customProperties: { variables: srcCss.variables },
+          customMedia: { extensions: srcCss.media }
+        }
+      }),
+      require('postcss-browser-reporter')(),
+      require('postcss-reporter')()
+    ]
+  }
 }
