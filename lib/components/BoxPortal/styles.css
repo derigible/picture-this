@@ -1,5 +1,10 @@
 .root {
   padding: var(--standard-padding);
+  float: left;
+}
+
+.small {
+  width: var(--box-size-small);
 }
 
 .medium {

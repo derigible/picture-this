@@ -1,0 +1,5 @@
+.rightHeader {
+  flex: 0 0 auto;
+  display: inline-flex;
+  text-align: right;
+}
